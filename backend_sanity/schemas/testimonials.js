@@ -9,18 +9,21 @@ export default {
             type: 'string'
         },
         {
-            name: 'name',
-            title: 'Name',
+            name: 'company',
+            title: 'Company',
             type: 'string'
         },
         {
-            name: 'name',
-            title: 'Name',
-            type: 'string'
+            name: 'imgUrl',
+            title: 'ImgUrl',
+            type: 'image',
+            options: {
+                hotspot: true
+            }
         },
         {
-            name: 'name',
-            title: 'Name',
+            name: 'feedback',
+            title: 'Feedback',
             type: 'string'
         }
 
