@@ -27,17 +27,26 @@ const Work = () => {
   
 
   const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{y: 100, opacity: 0}]);
 
+    setTimeout(() => {
+      setAnimateCard([{y: 0, opacity: 1}]);
+
+      if(item === 'All'){
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)))
+      }
+    }, 500);
   }
-
-
 
   return (
     <>
       <h2 className='head-text'>My Creative <span>Portfolio</span> <br /> Section</h2>
 
       <div className='app__work-filter'>
-        {['UI/UX', 'Web App', 'MobileApp', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -61,11 +70,11 @@ const Work = () => {
               <motion.div
                 whileHover={{opacity: [0, 1]}}
                 transition={{duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5}}
-                className='app__work-hover app__flex'
+                className='app__work-hovering app__flex'
               >
                 <a href={work.projectLink} target='_blank' rel='norefer'>
                   <motion.div
-                    whileInView={{scale: [0, 1] }}
+                     whileInView={{scale: [0, 1] }}
                      whileHover={{scale: [1, 0.9] }}
                      transition={{duration: 0.25}}
                      className='app__flex'
@@ -76,7 +85,7 @@ const Work = () => {
 
                 <a href={work.codeLink} target='_blank' rel='norefer'>
                   <motion.div
-                    whileInView={{scale: [0, 1] }}
+                     whileInView={{scale: [0, 1] }}
                      whileHover={{scale: [1, 0.9] }}
                      transition={{duration: 0.25}}
                      className='app__flex'
