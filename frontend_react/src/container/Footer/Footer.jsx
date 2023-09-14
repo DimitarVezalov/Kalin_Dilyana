@@ -40,7 +40,7 @@ const Footer = () => {
           setIsformSubmitted(false);
         }, 3000);
         setLoading(false);
-
+        setFormData({user_name: '', user_email: '', message: ''});
       }); 
       
      
