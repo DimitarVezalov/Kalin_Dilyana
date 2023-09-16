@@ -5,6 +5,7 @@ import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.png';
+import colorPalette from '../assets/colorPalette.png';
 import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
@@ -17,6 +18,8 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import canvas from '../assets/canvas.png';
+import reading from '../assets/reading.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -34,6 +37,14 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import clown from '../assets/clown.png';
+import abc from '../assets/abc.png';
+
+
+import edGif from '../assets/edGif.gif';
+import coverDetegledane from '../assets/coverDetegledane.jpg';
+import coverDetegledane1 from '../assets/coverDetegledane1.png';
+import profileDetegledane from '../assets/profileDetegledane.png';
 
 export default {
   email,
@@ -42,9 +53,12 @@ export default {
   cpp,
   css,
   figma,
+  reading,
   flutter,
+  colorPalette,
   git,
   graphql,
+  canvas,
   html,
   javascript,
   mu5,
@@ -69,4 +83,10 @@ export default {
   nb,
   skype,
   spotify,
+  edGif,
+  clown,
+  abc,
+  coverDetegledane,
+  coverDetegledane1,
+  profileDetegledane
 };
