@@ -46,7 +46,7 @@ import coverDetegledane from '../assets/coverDetegledane.jpg';
 import coverDetegledane1 from '../assets/coverDetegledane1.png';
 import profileDetegledane from '../assets/profileDetegledane.png';
 
-export default {
+const images  = {
   email,
   mobile,
   api,
@@ -90,3 +90,5 @@ export default {
   coverDetegledane1,
   profileDetegledane
 };
+
+export default images;

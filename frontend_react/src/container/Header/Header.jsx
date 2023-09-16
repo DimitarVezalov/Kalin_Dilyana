@@ -63,7 +63,7 @@ const Header = () => {
       >
         {[images.abc, images.canvas, images.clown, images.reading].map((circle, index) => (
           <motion.div
-            whileTap={{ rotate: index % 2 == 0 ? 360 : -360 }}
+            whileTap={{ rotate: index % 2 === 0 ? 360 : -360 }}
             transition={{ duration: 0.7}}
             className='circle-cmp app__flex'
             key={`circle-${index}`}
