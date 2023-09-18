@@ -46,7 +46,7 @@ const Footer = () => {
     e.preventDefault();
 
     setLoading(true);
-    emailjs.sendForm(process.env.EMAIlJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, form.current, process.env.EMAIlJS_PUBLIC_KEY)
+    emailjs.sendForm(process.env.REACT_APP_EMAIlJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, form.current, process.env.REACT_APP_EMAIlJS_PUBLIC_KEY)
       .then((result) => {
         setIsformSubmitted(true);
       }, (error) => {
