@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { urlFor, client } from '../../client';
 
+import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { Modal, List } from '../../components';
+
+
 import './About.scss';
 
 
@@ -10,6 +13,7 @@ import './About.scss';
 const About = () => {
 
   const [abouts, setAbouts] = useState([]);
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]'
@@ -18,27 +22,18 @@ const About = () => {
       .then((data) => setAbouts(data))
   }, []);
 
+  const showDetails = () => {
+    console.log('aaaaaa');
+  }
 
   return (
     <>
       <h2 className='head-text'>I know that <span>Good Apps</span> <br /> means <span>Good Business</span></h2>
-      <div className='app__profiles'>
-        {abouts.map((about, index) => (
-          <AnimatePresence>
-            <motion.div
-              whileInView={{ opacity: 1 }}
-              whileHover={{ scale: 1.4 }}
-              transition={{ duration: 0.5, type: 'tween' }}
-              className='app__profile-item'
-              key={about.title + index}
-            >
-              <img src={urlFor(about.imgUrl)} alt={about.title} />
-              <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
-              <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
-            </motion.div>
-          </AnimatePresence>
-        ))}
+      <div className='app__profiles' >
+        <List setSelected={setSelected} items={abouts} urlFor={urlFor} classNames={'app__profile-item'}/>
+        <Modal selected={selected} setSelected={setSelected} urlFor={urlFor}/>
       </div>
+     
     </>
   );
 }

@@ -10,8 +10,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
-
-   
 }
 
 .app__profile-item{
@@ -24,9 +22,11 @@
     margin: 2rem;
     
     
+    
     h2, p{
         //word-break: normal;
         text-align: center;
+        text-overflow: ellipsis;
     }
 
     img{

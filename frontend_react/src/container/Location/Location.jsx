@@ -21,7 +21,7 @@ const Location = () => {
 }
 
 function Map() {
-    const center = useMemo(() => ({ lat: 42.655603693338385, lng: 23.31454268465771 }), []);
+    const center = useMemo(() => ({lat: 42.6550216240933, lng: 23.314585030116966 }), []);
 
     return (
         <>

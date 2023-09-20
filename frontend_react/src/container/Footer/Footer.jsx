@@ -3,7 +3,6 @@ import emailjs from '@emailjs/browser';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-//import { client } from '../../client';
 import './Footer.scss';
 
 const Footer = () => {
@@ -32,14 +31,6 @@ const Footer = () => {
     return false;
   }
     
-  //Enable loading text on button
-  // const handleLoading = () => {
-  //   if(disableButton){
-  //     setLoading(false);
-  //   }
-  //   setLoading(true);
-  // }
-
 
 
   const sendEmail = (e) => {
@@ -62,23 +53,6 @@ const Footer = () => {
 
   };
 
-
-  // const handleSubmitt = () => {
-  //   setLoading(true);
-
-  //   const contact = {
-  //     _type: 'contact',
-  //     name: name,
-  //     email: email,
-  //     message: message
-  //   }
-
-  //   client.create(contact)
-  //     .then(() => {
-  //       setLoading(false);
-  //       setIsformSubmitted(true);
-  //     })
-  // }
 
   return (
     <>
