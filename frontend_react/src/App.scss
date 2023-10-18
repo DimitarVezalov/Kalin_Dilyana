@@ -60,7 +60,7 @@
     text-transform: capitalize;
   
     span {
-      color: var(--secondary-color);
+      color: var(--green-color);
     }
   
     @media screen and (min-width: 2000px) {
@@ -77,6 +77,10 @@
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
+    
+    span {
+      color: var(--green-color);
+    }
   
     @media screen and (min-width: 2000px) {
       font-size: 1.75rem;
@@ -127,8 +131,8 @@
       }
   
       &:hover {
-        background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        background-color: var(--green-color);
+        border-color: var(--green-color);
   
         svg {
           color: var(--white-color);
@@ -167,7 +171,7 @@
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--green-color);
       }
   
       @media screen and (min-width: 2000px) {

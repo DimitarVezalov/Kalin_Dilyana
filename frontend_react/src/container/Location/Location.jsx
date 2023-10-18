@@ -14,7 +14,7 @@ const Location = () => {
     }
     return (
         <>
-            <h2 className='head-text'>Or Find Us At</h2>
+            <h2 className='head-text'>Или ни <span>намерете тук</span></h2>
             <Map className='app__location-container'></Map>
         </>
     );

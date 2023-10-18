@@ -56,7 +56,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className='head-text'>Contact us</h2>
+      <h2 className='head-text'>Свържете се <span>с нас</span></h2>
 
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
@@ -84,7 +84,7 @@ const Footer = () => {
             <button ref={btn} disabled={disableButton()} className='p-text' type='submit' >{loading ? 'Sending' : 'Send Message'}</button>
           </form>
           : <div>
-            <h3 className='head-text'>Thank you for your email!</h3>
+            <h3 className='head-text'>Thank you <span>for your email!</span></h3>
           </div>
       }
     </>

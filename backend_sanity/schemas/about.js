@@ -11,7 +11,8 @@ export default{
         {
             name:'description',
             title:'Description',
-            type:'string'
+            type:'string',
+            validation: Rule => Rule.min(10)
         },
         {
             name:'imgUrl',

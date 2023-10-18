@@ -22,9 +22,6 @@ const About = () => {
       .then((data) => setAbouts(data))
   }, []);
 
-  const showDetails = () => {
-    console.log('aaaaaa');
-  }
 
   return (
     <>

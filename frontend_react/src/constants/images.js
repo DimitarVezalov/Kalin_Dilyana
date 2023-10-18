@@ -29,6 +29,10 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import halloween from '../assets/halloween.jpg';
+import christmas from '../assets/christmas.jpg';
+
+
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -39,6 +43,8 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import clown from '../assets/clown.png';
 import abc from '../assets/abc.png';
+import detegledaneicon from '../assets/detegledaneicon.ico';
+
 
 
 import edGif from '../assets/edGif.gif';
@@ -54,6 +60,7 @@ const images  = {
   css,
   figma,
   reading,
+  detegledaneicon,
   flutter,
   colorPalette,
   git,
@@ -62,6 +69,7 @@ const images  = {
   html,
   javascript,
   mu5,
+  christmas,
   node,
   python,
   react,
@@ -81,6 +89,7 @@ const images  = {
   asus,
   bolt,
   nb,
+  halloween,
   skype,
   spotify,
   edGif,

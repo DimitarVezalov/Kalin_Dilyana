@@ -1,4 +1,4 @@
-.app__modal-container {
+.app__modal-overlay {
     position: fixed;
     top: 0;
     right: 0;
@@ -9,37 +9,75 @@
     z-index: 50;
     overflow-y: hidden;
     cursor: pointer;
+
+    
+}
+
+.app__modal-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    
 }
 
 .app__modal-card {
     display: flex;
+    width: 60%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+    margin: auto;
     flex-direction: column;
-}
 
-.app__modal-item {
-
-   cursor: default;
-
-    img {
-        width: 600px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+    body {
+        overflow-y: hidden;
     }
 
-    h2,
-    p {
-        padding: 4px 6px;
+}
+
+.app__modal-header {
+    width: 100%;
+    height: 10%;
+    margin-bottom: 3px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    h2{
+        padding: 1px 4px;
     }
 }
 
-.app__modal-info {
-    width: 600px;
+.app__modal-body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    cursor: default;
+}
+
+.app__modal-img {
+    
+    width: 100%;
+    height: 100%;
+}
+
+.app__modal-footer{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    margin-top: 3px;
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    overflow-y: auto;
+
+    
+    &:hover{
+        cursor: text;
+    }
+    
+    p{
+        padding: 2px 6px;
+    }
 }

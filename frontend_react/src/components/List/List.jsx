@@ -8,6 +8,11 @@ const Card = ({ setSelected, item, urlFor, classNames }) => {
     const maxChar = 50;
 
     const shortenText = (text) => {
+        
+        if(text.lastIndexOf(" ") === -1 && text.length > 22){
+            return text.substring(0, 19) + "..."
+        }
+
         if (text.length > maxChar) {
             text = text.substring(0, maxChar);
             text = text.substring(0, Math.min(text.length, text.lastIndexOf(" "))) + " . . .";
@@ -25,8 +30,8 @@ const Card = ({ setSelected, item, urlFor, classNames }) => {
             onClick={() => {setSelected(item)}}
         >
             <img src={urlFor(item.imgUrl)} alt={item.title} />
-            <h2 className='bold-text' style={{ marginTop: 20 }}>{shortenText(item.title)}</h2>
-            <p className='p-text' style={{ marginTop: 10 }}>{shortenText(item.description)}</p>
+            <h2 className='bold-text' style={{ marginTop: 20 }}>{shortenText(item.title, this)}</h2>
+            <p className='p-text' style={{ marginTop: 10 }}>{shortenText(item.description, this)}</p>
         </motion.div>
 
     )

@@ -9,18 +9,38 @@ const Modal = ({ selected, setSelected, urlFor }) => {
         return <></>;
     }
 
+    const show = () => {
+        console.log(selected.description.length);
+    }
+
     return (
-        <div className='app__modal-container' onClick={() => setSelected(null)}>
-            <div className='app__flex app__modal-card' >
-                <div onClick={(e) => e.stopPropagation()} className='app__modal-item'>
-                    <img src={urlFor(selected.imgUrl)} alt={selected.title} />
+        <div className='app__modal-overlay' onClick={() => setSelected(null)}>
+            <div className='app__modal-container'>
+                <div className='app__modal-card' onClick={(e) => e.stopPropagation()}>
+                    <motion.div
+                        className='app__modal-header'
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2, delay: 0.3, type: 'spring', stiffness: 200 }}
+                        onClick={show()}
+                    >
+                        <h2 className='bold-text' style={{ marginTop: 20 }}>{selected.title}</h2>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, type: 'tween' }}
+                        className='app__modal-body'
+                    >
+                        <img src={urlFor(selected.imgUrl)} alt={selected.title} className='app__modal-img' />
+                    </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2, delay: 0.1, type: 'spring', stiffness: 200}}
-                        className='app__modal-info'
+                        transition={{ duration: 0.2, delay: 0.3, type: 'spring', stiffness: 200 }}
+                        className='app__modal-footer'
                     >
-                        <h2 className='bold-text' style={{ marginTop: 20 }}>{selected.title}</h2>
+
                         <p className='p-text' style={{ marginTop: 10 }}>{selected.description}</p>
                     </motion.div>
                 </div>

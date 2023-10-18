@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital@1&display=swap");
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: "Andika", sans-serif;
+  --font-nav: "DM Sans", sans-serif;
 
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
+  --green-color: #08b808;
+  --red-color: #fb1f1f;
+  --blue-color: #1e37f8;
+  --orange-color: #f29e17;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
