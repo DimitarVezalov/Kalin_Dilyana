@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillInstagram, AiFillFacebook } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { urlFor, client } from '../../client';
 
+import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './Work.scss';
 
@@ -42,7 +42,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className='head-text'>My Creative <span>Portfolio</span> <br /> Section</h2>
+      <h2 className='head-text'>Вижте част <span>от нашите събития</span></h2>
 
       <div className='app__work-filter'>
         {['UI/UX', 'Web App', 'Mobile App', 'Работилница', 'React JS', 'All'].map((item, index) => (

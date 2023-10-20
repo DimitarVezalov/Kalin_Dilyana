@@ -4,3 +4,4 @@ export {default as SocialMedia} from './SocialMedia';
 export {default as Envelope} from './Envelope';
 export {default as Modal} from './Modal/Modal';
 export {default as List} from './List/List';
+export {default as PricingCard} from './PricingCard/PricingCard';

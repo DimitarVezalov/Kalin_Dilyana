@@ -43,6 +43,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import clown from '../assets/clown.png';
 import abc from '../assets/abc.png';
+import bgIMGPrice from '../assets/bgIMGPrice.jpg';
 import detegledaneicon from '../assets/detegledaneicon.ico';
 
 
@@ -69,6 +70,7 @@ const images  = {
   html,
   javascript,
   mu5,
+  bgIMGPrice,
   christmas,
   node,
   python,

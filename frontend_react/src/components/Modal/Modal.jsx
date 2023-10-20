@@ -37,7 +37,7 @@ const Modal = ({ selected, setSelected, urlFor }) => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2, delay: 0.3, type: 'spring', stiffness: 200 }}
+                        transition={{ duration: 2, delay: 0.3, type: 'spring', stiffness: 200 }}
                         className='app__modal-footer'
                     >
 

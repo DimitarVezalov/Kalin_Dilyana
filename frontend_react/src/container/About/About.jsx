@@ -25,7 +25,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>I know that <span>Good Apps</span> <br /> means <span>Good Business</span></h2>
+      <h2 className='head-text'>При нас забавлението <span>и образуванието</span> <br /> вървят <span>ръка за ръка</span></h2>
       <div className='app__profiles' >
         <List setSelected={setSelected} items={abouts} urlFor={urlFor} classNames={'app__profile-item'}/>
         <Modal selected={selected} setSelected={setSelected} urlFor={urlFor}/>
