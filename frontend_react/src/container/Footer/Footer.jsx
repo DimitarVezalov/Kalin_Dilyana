@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -61,7 +62,7 @@ const Footer = () => {
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
           <img src={images.email} alt="email" />
-          <a href="mailto:gmail.com" className='p-text'>detegledane@gmail.com</a>
+          <a href="mailto:detegledane@gmail.com" className='p-text'>detegledane@gmail.com</a>
         </div>
         <div className='app__footer-card'>
           <img src={images.mobile} alt="mobile" />
@@ -73,13 +74,19 @@ const Footer = () => {
           <form ref={form} onSubmit={sendEmail} className='app__footer-form app__flex'>
 
             <div className='app__flex'>
-              <input className='p-text' type="text" placeholder='Your Name' name='user_name' value={user_name} onChange={handleChageInput} />
+              <motion.input className='p-text' type="text" placeholder='Your Name' name='user_name' value={user_name} onChange={handleChageInput} 
+                whileFocus={{scale: 1.05}}
+              />
             </div>
             <div className='app__flex'>
-              <input className='p-text' type="email" placeholder='Your Email' name='user_email' value={user_email} onChange={handleChageInput} />
+              <motion.input className='p-text' type="email" placeholder='Your Email' name='user_email' value={user_email} onChange={handleChageInput} 
+                whileFocus={{ scale: 1.05 }}
+              />
             </div>
             <div>
-              <textarea className='p-text' placeholder='Your Message' name='message' value={message} rows='10' cols='50' onChange={handleChageInput} />
+              <motion.textarea className='p-text' placeholder='Your Message' name='message' value={message} rows='10' cols='50' onChange={handleChageInput} 
+                whileFocus={{ scale: 1.05 }}
+              />
             </div>
             <button ref={btn} disabled={disableButton()} className='p-text' type='submit' >{loading ? 'Sending' : 'Send Message'}</button>
           </form>

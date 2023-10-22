@@ -24,7 +24,7 @@
         margin: 0.5rem;
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--green-color);
             color: #fff;
         }
 
@@ -35,7 +35,7 @@
     }
 
     .item-active {
-        background-color: var(--secondary-color);
+        background-color: var(--green-color);
         color: #fff;
     }
 }
@@ -48,6 +48,7 @@
 
     .app__work-item {
         width: 270px;
+        min-height: 424px;
         flex-direction: column;
 
         margin: 2rem;
@@ -56,7 +57,6 @@
         background-color: #f1f3f2e9;
         color: #000;
 
-        cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
@@ -119,10 +119,10 @@
         margin: 1rem;
         font-family: var(--font-base);
         font-weight: 800;
-        cursor: pointer;
         //transition: all 0.3s ease;
 
         svg {
+            cursor: pointer;
             width: 50%;
             height: 50%;
             color: var(--white-color);
@@ -141,10 +141,17 @@
         line-height: 1.5;
     }
 
-    .app__work-tag {
+    .app__work-tag{
         position: absolute;
         padding: 0.5rem 1rem;
-        border-radius: 10px;background-color: #fff;
+        border-radius: 10px;
+        background-color: #f1f3f2e9;
         top: -25px
+
+        
+    }
+
+    p:nth-child(1){
+        color: var(--green-color);
     }
 }

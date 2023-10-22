@@ -30,7 +30,7 @@ const Pricing = () => {
               <motion.div
                 key={`${item.title + index}`}
                 whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{scale: 1.2}}
+                whileHover={[{scale: 1.2}]}
                 transition={{ duration: 0.5, type: 'tween' }}
               >
                 <PricingCard
